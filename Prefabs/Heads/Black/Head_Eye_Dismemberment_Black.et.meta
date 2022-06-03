@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{A76D8CC6F29955D1}Prefabs/Heads/White/Head_Eye_Dismemberment_Black.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

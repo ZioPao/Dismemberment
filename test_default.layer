@@ -5,19 +5,19 @@ GenericEntity {
    Materials {
     MaterialAssignClass "{5986B842FA6E6AB7}" {
      SourceMaterial "Hat_Knitted_01"
-     AssignedMaterial "{17A11DA8421198F3}Assets/Items/Food/Data/MeatDismemberment.emat"
+     AssignedMaterial "{17A11DA8421198F3}Assets/Materials/MeatDismemberment.emat"
     }
    }
   }
  }
- coords 17.879 2.071 16.391
+ coords 17.879 2.071 223.222
 }
 $grp SCR_ChimeraCharacter {
  {
-  coords 10.918 1.001 12.185
+  coords 10.918 1.001 219.016
  }
  {
-  coords 17.5 1.001 11.859
+  coords 17.5 1.001 218.69
  }
  {
   coords 17.077 53.947 12.899
@@ -47,6 +47,24 @@ $grp SCR_ChimeraCharacter {
    }
   }
  }
+ {
+  coords 27.66 1.001 224.931
+ }
+ {
+  coords 22.767 1.001 223.581
+ }
+ {
+  coords 20.999 1.001 221.742
+ }
+ {
+  coords 20.533 1.001 218.338
+ }
+ {
+  coords 19.796 1.001 216.031
+ }
+ {
+  coords 17.35 2.455 218.71
+ }
 }
 GenericEntity : "{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et" {
  components {
@@ -54,23 +72,77 @@ GenericEntity : "{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et" {
    Active AlwaysActive
   }
  }
- coords 23.644 6.305 17.584
+ coords 23.644 6.305 224.415
  angleZ 0
  scale 10.7
 }
 $grp SCR_ChimeraCharacter : "{2619482C6C4202E0}Prefabs/Characters/Campaign/Final/Campaign_US_AI.et" {
  {
-  coords 15.483 1.001 7.875
+  coords 15.483 1.001 214.706
  }
  {
-  coords 14.157 1.001 8.328
+  coords 14.157 1.001 215.159
  }
  {
-  coords 17.816 1.001 7.997
+  coords 17.816 1.001 214.828
+ }
+ {
+  coords 25.643 1.001 220.947
+ }
+ {
+  coords 24.317 1.001 221.4
+ }
+ {
+  coords 27.976 1.001 221.069
+ }
+ {
+  coords 20.75 1.001 219.597
+ }
+ {
+  coords 19.424 1.001 220.05
+ }
+ {
+  coords 23.083 1.001 219.719
+ }
+ {
+  coords 18.982 1.001 217.758
+ }
+ {
+  coords 17.656 1.001 218.211
+ }
+ {
+  coords 21.315 1.001 217.88
+ }
+ {
+  coords 18.516 1.001 214.354
+ }
+ {
+  coords 17.19 1.001 214.807
+ }
+ {
+  coords 20.849 1.001 214.476
+ }
+ {
+  coords 17.779 1.001 212.047
+ }
+ {
+  coords 16.453 1.001 212.5
+ }
+ {
+  coords 20.112 1.001 212.169
+ }
+ {
+  coords 15.333 2.455 214.726
+ }
+ {
+  coords 14.007 2.455 215.179
+ }
+ {
+  coords 17.666 2.455 214.848
  }
 }
-SCR_ChimeraCharacter : "{BE82EFB8829DD2EC}Prefabs/Characters/Core/Character_Base_Dismemberment.et" {
- coords 14.768 1.001 13.507
+SCR_ChimeraCharacter : "{BE82EFB8829DD2EC}Prefabs/WIP_FullDismemberment/Core/Character_Base_Dismemberment.et" {
+ coords 14.768 1.001 220.338
 }
 GameEntity : "{FE5C49069C2499D9}Prefabs/Characters/HeadGear/Helmet_PASGT_01/Helmet_PASGT_01_cover.et" {
  components {
@@ -80,5 +152,5 @@ GameEntity : "{FE5C49069C2499D9}Prefabs/Characters/HeadGear/Helmet_PASGT_01/Helm
    Active AlwaysActive
   }
  }
- coords 16.65 2.948 9.072
+ coords 16.65 2.948 13.999
 }

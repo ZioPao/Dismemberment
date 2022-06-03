@@ -1,0 +1,17 @@
+MatPBRBasic {
+ Color 0.313 0.043 0.016 1
+ SurfaceProperties "{DA94EA1EF2914EB7}Common/Materials/Game/flesh.gamemat"
+ SpecularMul 4.087
+ RoughnessScale 0.587
+ AOScale 1.712
+ DielectricReflectance 0.024
+ BCRMap "{2FF4FEE4A9E5DB32}Assets/Items/Food/Data/MeatLeg_01_BCR.edds"
+ NormalPower 1.595
+ NMOMap "{90553284BFA300A7}Assets/Items/Food/Data/MeatLeg_01_N.edds"
+ GlobalMapsUVTransform MatUVTransform "{5986B8473CF516CD}" {
+  TilingU 0.25
+  TilingV 0.25
+  OffsetU -0.523
+  OffsetV -0.043
+ }
+}

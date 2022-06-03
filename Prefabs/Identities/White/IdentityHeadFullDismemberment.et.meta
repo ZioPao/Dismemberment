@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{76FA1045B6F21E20}Prefabs/Identities/White/IdentityHeadFullDismemberment.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

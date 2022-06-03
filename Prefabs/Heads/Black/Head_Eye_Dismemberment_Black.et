@@ -1,0 +1,50 @@
+GameEntity : "{6F0C6CF6F10B4148}Prefabs/Characters/Core/CharacterHead_Base.et" {
+ ID "529C89342C390093"
+ components {
+  MeshObject "{529C8934211B4893}" {
+   Object "{52F50A5F061314A8}Assets/Characters/Heads/Head_White_02/Head_White_02.xob"
+   Materials {
+    MaterialAssignClass "{5987414EABE1C2DD}" {
+     SourceMaterial "Eye"
+     AssignedMaterial "{8FBC3A6E946F056E}Common/Materials/Default_Transparent.emat"
+    }
+    MaterialAssignClass "{5987414EABE1C2BE}" {
+     SourceMaterial "Eye_Occlusion"
+     AssignedMaterial "{8FBC3A6E946F056E}Common/Materials/Default_Transparent.emat"
+    }
+    MaterialAssignClass "{5987414EABE1C2BA}" {
+     SourceMaterial "Eye_Occlusion_wound"
+     AssignedMaterial "{8FBC3A6E946F056E}Common/Materials/Default_Transparent.emat"
+    }
+    MaterialAssignClass "{5987414EABE1C2B9}" {
+     SourceMaterial "Eye_Water"
+     AssignedMaterial "{8FBC3A6E946F056E}Common/Materials/Default_Transparent.emat"
+    }
+    MaterialAssignClass "{5987414EABE1C287}" {
+     SourceMaterial "Eye_Water_wound"
+     AssignedMaterial "{8FBC3A6E946F056E}Common/Materials/Default_Transparent.emat"
+    }
+    MaterialAssignClass "{5987414EABE1C280}" {
+     SourceMaterial "Eye_wound"
+     AssignedMaterial "{8FBC3A6E946F056E}Common/Materials/Default_Transparent.emat"
+    }
+    MaterialAssignClass "{5987414EABE1C28D}" {
+     SourceMaterial "Eyelashes"
+     AssignedMaterial "{8FBC3A6E946F056E}Common/Materials/Default_Transparent.emat"
+    }
+    MaterialAssignClass "{5987414EABE1C289}" {
+     SourceMaterial "Eyelashes_wound"
+     AssignedMaterial "{8FBC3A6E946F056E}Common/Materials/Default_Transparent.emat"
+    }
+    MaterialAssignClass "{5987414EABE1C294}" {
+     SourceMaterial "Head_White_02"
+     AssignedMaterial "{53F69084A33003E0}Assets/Characters/HeadAmputation/Materials/HeadMaleEyeDismemberment_Black.emat"
+    }
+    MaterialAssignClass "{5987414EABE1C29F}" {
+     SourceMaterial "Head_White_02_wound"
+     AssignedMaterial "{53F69084A33003E0}Assets/Characters/HeadAmputation/Materials/HeadMaleEyeDismemberment_Black.emat"
+    }
+   }
+  }
+ }
+}

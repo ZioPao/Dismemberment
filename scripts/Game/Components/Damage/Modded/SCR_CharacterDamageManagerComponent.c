@@ -1,6 +1,29 @@
 modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponent
 {
 
+	
+	
+	
+	const ResourceName IDENTITY_HeadEyeDismembermentBlack = "{EE1E32B10A398E83}Prefabs/Identities/Black/IdentityHeadEyeDismemberment.et";
+	const ResourceName IDENTITY_HeadFullDismembermentBlack = "{F1F57D8F72C5897E}Prefabs/Identities/Black/IdentityHeadFullDismemberment.et";
+	const ResourceName IDENTITY_HeadMidDismembermentBlack = "{CA2D3383201D1745}Prefabs/Identities/Black/IdentityHeadMidDismemberment.et";
+	
+	
+	const ResourceName IDENTITY_HeadEyeDismembermentWhite = "{45DAB89BBE306ADF}Prefabs/Identities/White/IdentityHeadEyeDismemberment.et";
+	const ResourceName IDENTITY_HeadFullDismembermentWhite = "{76FA1045B6F21E20}Prefabs/Identities/White/IdentityHeadFullDismemberment.et";
+	const ResourceName IDENTITY_HeadMidDismembermentWhite = "{50621BD94C7ABD0D}Prefabs/Identities/White/IdentityHeadMidDismemberment.et";
+	
+	const ResourceName PREFAB_genericWound = "{DA5DADA0ADB7CD05}Prefabs/Wounds/generic_amputation_wound.et";
+	const ResourceName PREFAB_eyeWound = "{83BAC0D42B0D4CDE}Prefabs/Wounds/eye_wound.et";
+	
+	
+	
+	
+	ref map<string, ref StructHeadDismemberment> ethnMap;
+	ref map<ResourceName, string> knownHeads;
+	
+	
+	
 	protected override void OnDamage(
 				EDamageType type,
 				float damage,
@@ -14,10 +37,7 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 		super.OnDamage(type, damage, pHitZone, instigator, hitTransform, speed, colliderID, nodeID);
 		
 		
-		
-		// It's not health... But for now it'll work
-		Print(damage);
-		if (pHitZone.GetName() == "Head")
+		if (pHitZone.GetName() == "Head" && lastState == EDamageState.DESTROYED)
 			PerformHeadAmputation(damage);
 		
 		
@@ -53,99 +73,166 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 			EntitySpawnParams params = EntitySpawnParams();
 			params.TransformMode = ETransformMode.WORLD;
 			GetOwner().GetWorldTransform(params.Transform);
-						params.Transform[3][1] = params.Transform[3][1] + 1.7;
+			params.Transform[3][1] = params.Transform[3][1] + 1.7;
 			IEntity helmetEntity = GetGame().SpawnEntityPrefab(helmetResource, null, params);
 			
 			helmetEntity.GetPhysics().Destroy();
 			Physics.CreateDynamic(helmetEntity, 1.0, -1);
-			helmetEntity.GetPhysics().SetActive(ActiveState.ALWAYS_ACTIVE);
-
-			
+			helmetEntity.GetPhysics().SetActive(ActiveState.ACTIVE);
+	
 		}
-		
-		
-		
-
-	
-		
-		//Print(what);
-		//get reference
-		
-		
-		//spawn on the ground
-	
 	}
 	
-	
+
+	void InitEthnMap()
+	{
+		ethnMap = new map<string, ref StructHeadDismemberment>;
+		
+		
+		ethnMap.Insert("WhiteEye", new StructHeadDismemberment(IDENTITY_HeadEyeDismembermentWhite, PREFAB_eyeWound));
+		ethnMap.Insert("WhiteMid", new StructHeadDismemberment(IDENTITY_HeadMidDismembermentWhite, PREFAB_genericWound));
+		ethnMap.Insert("WhiteFull", new StructHeadDismemberment(IDENTITY_HeadFullDismembermentWhite, PREFAB_genericWound));
+
+		
+		ethnMap.Insert("BlackEye", new StructHeadDismemberment(IDENTITY_HeadEyeDismembermentBlack, PREFAB_eyeWound));
+		ethnMap.Insert("BlackMid", new StructHeadDismemberment(IDENTITY_HeadMidDismembermentBlack, PREFAB_genericWound));
+		ethnMap.Insert("BlackFull", new StructHeadDismemberment(IDENTITY_HeadFullDismembermentBlack, PREFAB_genericWound));
+		
+		
+		
+		/*
+		
+		knownHeads = new map<ResourceName, string>;
+		knownHeads.Insert("{0F6C19B0574DCBCA}Prefabs/Characters/Heads/Head_White_03.et", "White");
+		knownHeads.Insert("{C1F80EE178D948D6}Prefabs/Characters/Heads/Head_White_08.et", "White");
+		knownHeads.Insert("{D7C470712EC4D596}Prefabs/Characters/Heads/Head_White_05.et", "White");
+		
+		
+		
+		
+		knownHeads.Insert("{04F4D8CBA36A534B}Prefabs/Characters/Heads/Head_Black_02.et", "Black");
+		knownHeads.Insert("{04F4D8CBA36A534B}Prefabs/Characters/Heads/Head_Black_02.et", "Black");
+
+		*/
+		
+		
+		
+		
+		
+		
+	}
 	
 	void PerformHeadAmputation(float damage)
 	{
 	
 	/* CHANGE IDENTITY HERE */
+		
+		
+		InitEthnMap();
+		
+		
+		
+		// Check head 
 		CharacterIdentityComponent identityComponent = CharacterIdentityComponent.Cast(GetOwner().FindComponent(CharacterIdentityComponent));
-				
-		Resource resource;
+		ResourceName headResource = identityComponent.GetIdentity().GetHead();
+		string key;
+		
+		if (headResource.Contains("Head_White"))
+			key = "White";
+		
+		if (headResource.Contains("Head_Black"))
+			key = "Black";
+		else 
+			key = "White";
+		
+		
+		
+		
+		Resource identityResource;
+		Resource woundResource;
+		
+		StructHeadDismemberment headStruct;
+
 		int pivotId;
 		float scale;
 		vector rotation;
 		
-		if (damage < 80)
+
+		// start dismeemberment set it to 8
+		if (Math.RandomInt(0,4) < 8)
 		{
 			
-			
-			
-			
-			int randomChance = Math.RandomInt(0,2);
-			
-			
-			if (randomChance == 0)
+			// Minor Dismemberment
+			if (damage > 60 && damage < 80)
 			{
-				resource = Resource.Load("{50621BD94C7ABD0D}Prefabs/Identities/IdentityHeadMidDismemberment.et");
-				pivotId = 2708386983;
-				scale = 0.045;
-				rotation = {0, 90, -30};		// WE NEED A DIFFERENT MODEL!!!
-								//YAW NO 
-				//PITCH !!! 
-				//position = {}
-
+				
+				// Mid
+				if (Math.RandomInt(0,2) == 0)
+				{
+					
+					headStruct = ethnMap.Get(key + "Mid");
+					pivotId = 2708386983;
+					scale = 0.045;
+					rotation = {0, 90, -30};		// WE NEED A DIFFERENT MODEL!!!
+									//YAW NO 
+					//PITCH !!! 
+					//position = {}
+				}
+				// Eye dismemberment
+				else
+				{
+					
+					headStruct = ethnMap.Get(key + "Eye");
+					pivotId = 256054695;
+					scale = 0.027;
+					rotation = {0, 20, 20};	
+				
+				}
+			
+			
+			
 			}
+			// Full dismemberment
 			else
 			{
-				resource = Resource.Load("{45DAB89BBE306ADF}Prefabs/Identities/IdentityHeadEyeDismemberment.et");
-				pivotId = 2708386983;
-				scale = 0.045;
-				rotation = {0, 90, -30};		
-			}
+				headStruct = ethnMap.Get(key + "Full");
+				pivotId = 268344569;
+				scale = 0.04;
+				rotation = {0,0,0};
+			}		
 			
-		}
-		else
-		{
-			resource = Resource.Load("{19F3924C8ABA9AB5}Prefabs/Identities/IdentityHeadFullDismemberment.et");
-			pivotId = 268344569;
-			scale = 0.04;
-			rotation = {0,0,0};
-		}
+								
+		identityResource = Resource.Load(headStruct.headIdentity);
+		woundResource = Resource.Load(headStruct.woundPrefab);		
+					
+			
+		EntitySpawnParams params = EntitySpawnParams();
+		params.TransformMode = ETransformMode.WORLD;
+		GetOwner().GetWorldTransform(params.Transform);
+		params.Transform[3][1] = params.Transform[3][1] - 10000;
+			
 		
-		
-		
-		
-		IEntity testEntity = GetGame().SpawnEntityPrefab(resource);
-		CharacterIdentityComponent tempIdentity = CharacterIdentityComponent.Cast(testEntity.FindComponent(CharacterIdentityComponent));
+		IEntity identityEntity = GetGame().SpawnEntityPrefab(identityResource, null, params);
+		CharacterIdentityComponent tempIdentity = CharacterIdentityComponent.Cast(identityEntity.FindComponent(CharacterIdentityComponent));
 		
 		if (tempIdentity)
-			identityComponent.SetIdentity(tempIdentity.GetIdentity());
+			{
+				identityComponent.SetIdentity(tempIdentity.GetIdentity());
+				identityComponent.Deactivate(identityEntity);
+			
+			
+			}
 
 		else
 			Print("Cant find identity");
 		
-		
-		delete testEntity;
-		
-		
+		//it's not deleting them. No idea why. Can't even make them invisible ffs. 
+		delete identityEntity;		//it's not working?
 		
 		
-		//Spawn arm amputation 
-		Resource woundResource = Resource.Load("{331292E4AF2D0499}Prefabs/wound_amputation.ent");			//Change name
+		
+		
+		//Spawn amputation 
 		IEntity woundEntity = GetGame().SpawnEntityPrefab(woundResource);
 
 		//armEntity.SetScale(0.04);
@@ -159,6 +246,8 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 		//woundEntity.SetOrigin(woundOrigin);
 		GetOwner().AddChild(woundEntity, pivotId);
 		DropHelmetOff();
+		}
+		
 		
 
 		
@@ -182,6 +271,7 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 		// UPPER NECK ID = 268344569            ---------> Full dismemberment of head 
 		// HEAD ID = 2090324343                 ---------> Mid dismbemberment of head
 		// TONGUE ID = 2888468306				----------> Mid dismemberment of head BETTER
+		// RIGHT EYE ID = 256054695
 		
 		
 		
@@ -197,6 +287,21 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 		//Identity identityDismemberment = Identity.Cast(BaseContainerTools.LoadContainer(identityName));
 		//identityComponent.SetIdentity(identity);
 	
+	}
+
+}
+
+
+class StructHeadDismemberment
+{
+	ResourceName headIdentity;
+	ResourceName woundPrefab;
+	
+	
+	void StructHeadDismemberment(ResourceName hi, ResourceName wp)
+	{
+		this.headIdentity = hi;
+		this.woundPrefab = wp;
 	}
 
 }

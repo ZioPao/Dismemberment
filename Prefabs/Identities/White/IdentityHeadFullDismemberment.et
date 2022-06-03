@@ -1,0 +1,15 @@
+GenericEntity {
+ ID "5987414ACFAB1660"
+ components {
+  CharacterIdentityComponent "{5987414ACFAB166A}" {
+   Identity Identity "{5987414ACFAB1673}" {
+    VisualIdentity VisualIdentity "{5987414ACFAB167F}" {
+     Head "{98C2F92B92BFE317}Prefabs/Heads/Head_Full_Dismemberment.et"
+     BodyMeshesConfig MeshConfig "{5987414ACFAB167B}" {
+     }
+    }
+   }
+  }
+ }
+ coords 2.265 -0.8 0.28
+}
