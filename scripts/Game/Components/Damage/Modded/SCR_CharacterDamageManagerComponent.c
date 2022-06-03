@@ -91,37 +91,42 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 		
 		if (damage < 80)
 		{
-			resource = Resource.Load("{50621BD94C7ABD0D}Prefabs/Characters/Core/Identities/IdentityHeadMidDismemberment.et");
 			
 			
 			
-			pivotId = 2708386983;
-			scale = 0.045;
-			rotation = {0, 90, -30};		// WE NEED A DIFFERENT MODEL!!!
+			
+			int randomChance = Math.RandomInt(0,2);
 			
 			
-			//YAW NO 
-			//PITCH !!! 
-			//position = {}
+			if (randomChance == 0)
+			{
+				resource = Resource.Load("{50621BD94C7ABD0D}Prefabs/Identities/IdentityHeadMidDismemberment.et");
+				pivotId = 2708386983;
+				scale = 0.045;
+				rotation = {0, 90, -30};		// WE NEED A DIFFERENT MODEL!!!
+								//YAW NO 
+				//PITCH !!! 
+				//position = {}
 
-		
+			}
+			else
+			{
+				resource = Resource.Load("{45DAB89BBE306ADF}Prefabs/Identities/IdentityHeadEyeDismemberment.et");
+				pivotId = 2708386983;
+				scale = 0.045;
+				rotation = {0, 90, -30};		
+			}
+			
 		}
 		else
 		{
-			resource = Resource.Load("{19F3924C8ABA9AB5}Prefabs/Characters/Core/Identities/IdentityHeadFullDismemberment.et");
+			resource = Resource.Load("{19F3924C8ABA9AB5}Prefabs/Identities/IdentityHeadFullDismemberment.et");
 			pivotId = 268344569;
 			scale = 0.04;
 			rotation = {0,0,0};
 		}
 		
 		
-		bool test = true;		
-		if (test)
-		{
-		
-			resource = Resource.Load("{45DAB89BBE306ADF}Prefabs/Characters/Core/Identities/IdentityHeadRandomDismemberment.et");
-
-		}
 		
 		
 		IEntity testEntity = GetGame().SpawnEntityPrefab(resource);
@@ -140,7 +145,7 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 		
 		
 		//Spawn arm amputation 
-		Resource woundResource = Resource.Load("{23685B78E1E4C4E9}Assets/LeftFleshArm.et");			//Change name
+		Resource woundResource = Resource.Load("{331292E4AF2D0499}Prefabs/wound_amputation.ent");			//Change name
 		IEntity woundEntity = GetGame().SpawnEntityPrefab(woundResource);
 
 		//armEntity.SetScale(0.04);
