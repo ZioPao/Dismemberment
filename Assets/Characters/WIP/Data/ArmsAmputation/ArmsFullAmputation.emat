@@ -1,0 +1,9 @@
+MatPBRBasic {
+ Color 1 1 1 1
+ AlphaTest 1.834
+ AlphaMul 0.749
+ BlendMode AlphaBlend
+ BCRMap "{7E399D0A8C928034}Assets/Characters/Basebody/Data/Arms_BCR.edds"
+ OpacityMap "{F6DC22D8EC515570}Assets/Characters/Basebody/Data/Textures/OpacityArms.edds"
+ NMOMap "{46E1269855E5D2AA}Assets/Characters/Basebody/Data/Arms_NMO.edds"
+}

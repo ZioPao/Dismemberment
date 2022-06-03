@@ -1,0 +1,516 @@
+SCR_ChimeraCharacter {
+ ID "5986AA57DB3A95F3"
+ components {
+  ControllersManagerComponent "{5986AA57DB3A95FE}" {
+  }
+  SCR_CharacterControllerComponent "{5986AA57DB3A95FC}" {
+   LeftHandPosition EntitySlotInfo "{520EA1D2F659CEAB}" {
+    PivotID "lefthandprop"
+    ChildPivotID "snap_weapon"
+   }
+   RightHandPosition InventoryStorageSlot RightHand {
+    PivotID "RightHandProp"
+    Enabled 0
+    Prefab ""
+   }
+   WaterMovementLimits {
+    0 0 0.221 0 0.375 0.247 0.562 0.395 0.715 0.457 0.828 0.628 1 0.75
+   }
+   LeanSpeed 5
+  }
+  SignalsManagerComponent "{5986AA57DB3A95C6}" {
+  }
+  CharacterSoundComponent "{5986AA57DB3A95C5}" {
+   Filenames {
+    "{81D32DC765A2B68D}Sounds/Character/Character_Movement_Foley_Locomotion.acp" "{4D7D189EAFF7AC12}Sounds/Character/Character_Footsteps.acp" "{67007BA2E4D81B0D}Sounds/Character/Character_Movement_Foley_Additive.acp" "{685F8084FD1F0569}Sounds/Vegetation/Collisions/Vegetation_Collision.acp" "{B3C8216759E0809B}Sounds/Character/Character_Movement_Vehicles.acp" "{5A6E4C9089CB9606}Sounds/Character/Character_Movement_Swim.acp" "{E59C77F94B1AE155}Sounds/Character/Character_Jump_Landing.acp" "{FC1845C71FCA50CC}Sounds/Character/Character_Prone.acp"
+   }
+   FoliageCollisionLayer "Foliage"
+  }
+  SCR_CommunicationSoundComponent "{5986AA57DB3A95C3}" {
+   Filenames {
+    "{BEC7770A04409030}Sounds/RadioProtocol/RadioProtocol_Report_US.acp" "{592626568066103C}Sounds/RadioProtocol/RadioProtocol_Movement_US.acp" "{337FD2BFEFC028E6}Sounds/RadioProtocol/RadioProtocol_Confirmations_US.acp" "{7F439DEA74FDB888}Sounds/RadioProtocol/RadioProtocol_Combat_US.acp" "{30C6D89341B1EA1A}Sounds/Character/Character_Voice_Code.acp" "{C9BE186498C3B447}Sounds/Character/Character_Voice_Animations.acp" "{2A4581E5F38A843A}Sounds/RadioProtocol/RadioProtocol_Actions_US.acp"
+   }
+   StaminaThresholdMinimum 0.05
+  }
+  SCR_CharacterInventoryStorageComponent "{5986AA57DB3AA963}" {
+   components {
+    SCR_EquipmentStorageComponent "{5986AA57DB3AA960}" {
+     StoragePurpose 64
+     InitialStorageSlots {
+      SCR_EquipmentStorageSlot BinocularSlot {
+       PivotID "Spine5"
+       Offset 0 0.12 0.17
+       Angles -85 0 0
+       AllowedItemTypes {
+        "BINOCULARS"
+       }
+       AffectedByOcluders {
+        "ChestLeftBottomFront" "ChestRightBottomFront"
+       }
+       AnimatedMeshRefference "{9F3AF591CD6DFE1A}Assets/Characters/Basebody/Basebody_Male_01.xob"
+      }
+      SCR_EquipmentStorageSlot WristwatchSlot {
+       AllowedItemTypes {
+        "WATCH"
+       }
+      }
+     }
+    }
+   }
+   Attributes ItemAttributeCollection "{5986AA57DB3AA96A}" {
+    CustomAttributes {
+     PreviewRenderAttributes "{5986AA57DB3AA969}" {
+      CameraDistanceToItem 1.8
+      CameraOffset 0 0.3 0
+      FOV 40
+      IsDynamicObject 1
+     }
+    }
+   }
+   Priority 10
+   StoragePurpose 9
+   CharacterPreviewPrefab "{A46F7A3C178EBBAC}Prefabs/Characters/Preview/BasebodyPreviewCharacter.et"
+   m_fMaxWeight 80
+  }
+  AIControlComponent "{5986AA57DB3AA976}" {
+   components {
+    AICharacterAimingComponent "{5986AA57DB3AA975}" {
+     AimingPID 0.3 0 0
+     UsePID 1
+    }
+    AICharacterHeadAimingComponent "{5986AA57DB3AA974}" {
+    }
+    AICharacterMovementComponent "{5986AA57DB3AA973}" {
+    }
+    AICharacterSteeringComponent "{5986AA57DB3AA972}" {
+    }
+    AIPathfindingComponent "{5986AA57DB3AA971}" {
+     NavmeshProject "Soldiers"
+    }
+    PerceptionComponent "{5986AA57DB3AA970}" {
+     PositionInfo PointInfo "{5986AA57DB3AA97F}" {
+      PivotID "eyerightpupil"
+      Angles 90 0 0
+     }
+     SensorsList {
+      EyesSensor "{5986AA57DB3AA97C}" {
+       MaxRange 330
+      }
+      EarsSensor "{5986AA57DB3B1AF5}" {
+      }
+     }
+    }
+    SCR_AICombatComponent "{5986AA57DB3B1AF3}" {
+    }
+   }
+   Agenttemplate "{B4C861A6DA2F5E05}AI/AIAgents/SCR_ChimeraAIAgentFull.et"
+   OverrideAIBehaviorData "{990D4960E5206005}AI/BehaviorTrees/Chimera/Soldier/Soldier.bt"
+   EnableAI 0
+   PhysicsLayerPreset "CharacterAI"
+  }
+  ActionsPerformerComponent "{5986AA57DB3B1AF0}" {
+  }
+  BaseFlattenGrassComponent "{5986AA57DB3B1AF1}" {
+   ParametersCollection {
+    FlattenGrassParametersObject "{5986AA57DB3B1A8E}" {
+     SideX 0.6
+     ShapeOfGrassFlattening "Ellipse"
+    }
+    FlattenGrassParametersObject "{5986AA57DB3B1A8F}" {
+     SideX 0.9
+     SideZ 0.7
+     CenterLerp 0.5
+     TimeDown 0.75
+     MaxHeight 1
+     ShapeOfGrassFlattening "Ellipse"
+    }
+    FlattenGrassParametersObject "{5986AA57DB3B1A8C}" {
+     SideX 2
+     SideZ 0.8
+     Offset 0
+     CenterLerp 0.5
+     TimeDown 0.75
+     MaxHeight 1
+     ShapeOfGrassFlattening "Ellipse"
+    }
+   }
+  }
+  BaseWeaponManagerComponent "{5986AA57DB3B1A8A}" {
+   SlingPosition PointInfo "{5986AA57DB3B23FB}" {
+    PivotID "stomach3"
+    Angles 0 140 -90
+   }
+  }
+  CharacterAimingComponent "{5986AA57DB3B23F9}" {
+   SignalsSourceAccess SignalsSourceAccessClass "{5986AA57DB3B23F8}" {
+    signalsSuffix "Weapon"
+   }
+   LimitsHoriz -80 80
+   LimitsVert -80 80
+   AimingMaxSpeed 0.7 4
+   AimingSpeedControls 1.5 0.75
+   ProneLimitsVertical -40 20
+   AimModifiers {
+    OneHandAimModifier "{5986AA57DB3B23F7}" {
+    }
+   }
+  }
+  CharacterGrenadeSlotComponent "{5986AA57DB3B23F6}" {
+   isThrowable 1
+   WeaponType None
+   AttachType InventoryStorageSlot "{416B67397BB4F7EE}" {
+    PivotID "LeftArmVolume"
+    Enabled 0
+   }
+   WeaponSlotType "grenade"
+   WeaponSlotIndex 3
+  }
+  CharacterHeadAimingComponent "{5986AA57DB3B23F4}" {
+   SignalsSourceAccess SignalsSourceAccessClass "{5986AA57DB3B23F3}" {
+    signalsSuffix "Head"
+   }
+   ProvideAimingType Head
+   LimitsHoriz -180 180
+   LimitsVert -90 90
+   AimingMaxSpeed 10 5
+   AimingSpeedControls 1.5 0.75
+  }
+  CharacterPerceivableComponent "{5986AA57DB3B23F1}" {
+   "Additional aim points" {
+    AimPoint "{5986AA57DB3B23F0}" {
+     AimPointPosition PointInfo "{5986AA57DB3B23EF}" {
+      PivotID "spine3"
+     }
+     AimpointChecked 1
+     VsibilityChecked 1
+    }
+    AimPoint "{5986AA57DB3B23EE}" {
+     AimPointPosition PointInfo "{5986AA57DB3B23ED}" {
+      PivotID "head"
+     }
+     AimpointChecked 1
+     VsibilityChecked 1
+    }
+   }
+  }
+  CharacterWeaponSlotComponent "{5986AA57DB3B23EC}" {
+   WeaponType None
+   AttachType InventoryStorageSlot "{0C3DA650B52E120B}" {
+    PivotID "RightShoulderBlade"
+    Offset 0.05 -0.3 0.05
+    Angles 90 90 90
+    Enabled 0
+   }
+   WeaponSlotType "primary"
+   HolsteredIndex 1
+  }
+  CharacterWeaponSlotComponent "{5986AA57DB3B23EA}" {
+   WeaponType None
+   AttachType InventoryStorageSlot "{0C3DA650B52E127A}" {
+    PivotID "LeftShoulderBlade"
+    Offset 0.03 -0.3 -0.05
+    Angles 90 -90 90
+    Enabled 0
+   }
+   WeaponSlotType "primary"
+   WeaponSlotIndex 1
+  }
+  CharacterWeaponSlotComponent "{5986AA57DB3B23E9}" {
+   WeaponType None
+   AttachType InventoryStorageSlot "{9113A68B4D97E2E6}" {
+    PivotID "leftshoulderblade"
+    Offset 0.1 -0.2 -0.1
+    Angles 90 -90 90
+    Enabled 0
+   }
+   WeaponSlotType "secondary"
+   WeaponSlotIndex 2
+   HolsteredHidden 1
+  }
+  ClimbingDataComponent "{5986AA57DB3B23E7}" {
+   CanClimbOver 0
+  }
+  ColliderHistoryComponent "{5986AA57DB3B23E6}" {
+  }
+  EquipedWeaponStorageComponent "{5986AA57DB3B23E5}" {
+   StoragePurpose 2
+  }
+  EventHandlerManagerComponent "{5986AA57DB3BF51D}" {
+   EventHandlers {
+    BaseEventHandler "{5986AA57DB3BF51B}" {
+     EventName "OnWeaponChanged"
+    }
+    BaseEventHandler "{5986AA57DB3BF51A}" {
+     EventName "OnMuzzleChanged"
+    }
+    BaseEventHandler "{5986AA57DB3B9366}" {
+     EventName "OnMagazineChanged"
+    }
+    BaseEventHandler "{5986AA57DB3B9365}" {
+     EventName "OnAmmoCountChanged"
+    }
+    BaseEventHandler "{5986AA57DB3B9364}" {
+     EventName "OnMagazineCountChanged"
+    }
+    BaseEventHandler "{5986AA57DB3BA118}" {
+     EventName "OnFiremodeChanged"
+    }
+    BaseEventHandler "{5986AA57DB3BA127}" {
+     EventName "OnZeroingChanged"
+    }
+    BaseEventHandler "{5986AA57DB3BA126}" {
+     EventName "OnADSChanged"
+    }
+   }
+  }
+  MeshObject "{5986AA57DB3BA124}" {
+   Object "{9F3AF591CD6DFE1A}Assets/Characters/Basebody/Basebody_Male_01.xob"
+  }
+  Hierarchy "{5986AA57DB3BA123}" {
+  }
+  Ragdoll "{5986AA57DB3BA122}" {
+   Layers 1024
+   Definition "{CE761502CE2E1990}Prefabs/Characters/character.ragdoll"
+  }
+  SCR_BaseHUDComponent "{5986AA57DB3BA121}" {
+   InfoDisplays {
+    SCR_WeaponInfo "{5986AA57DB3BA12F}" {
+    }
+    SCR_WeaponSwitchingBaseUI "{5986AA57DB3BA12E}" {
+     VisibleAtParent 1
+     m_LayoutPath "{2A1E1E023967C5A8}UI/layouts/HUD/QuickSelectBar.layout"
+     m_eLayer OVERLAY
+    }
+   }
+  }
+  SCR_CallsignCharacterComponent "{5986AA57DB3BA12D}" {
+  }
+  SCR_CharacterDamageManagerComponent "{55872AD7B4E959F2}" : "{73C708A20F8B22E6}Prefabs/Characters/Core/DamageManager_Character_Base.ct" {
+  }
+  SCR_CharacterRankComponent "{5986AA57DB3BA12C}" {
+  }
+  SCR_CharacterRegistrationComponent "{5986AA57DB3BA12B}" {
+  }
+  SCR_CharacterStaminaComponent "{5986AA57DB3BA12A}" {
+   StaminaDrainRun -0.008
+   StaminaDrainSprint -0.016
+   EncumbranceDrainMax -0.1
+   BreathNormalFrequency 0.45
+   BreathExhaustedFrequency 1.1
+   m_fStaminaDrainThreshold 100
+   m_EventParams MetabolismEventParams "{5986AA57DB3BA137}" {
+    m_fCaloriesDrain 2
+    m_fHydrationDrain 2
+    m_fEnergyDrain 4
+   }
+  }
+  SCR_CharacterVicinityComponent "{5986AA57DB3BA135}" {
+  }
+  SCR_CompartmentAccessComponent "{5986AA57DB3BA134}" {
+   CompartmentLayerPreset "CharNoCollide"
+  }
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" : "{C32EE6A3FE0F6333}Prefabs/Editor/Components/Characters_SCR_EditableEntityComponent.ct" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    m_aAutoLabels {
+     35
+    }
+   }
+  }
+  SCR_FuelNozzleHolderComponent "{5986AA57DB3BA130}" {
+  }
+  SCR_GadgetManagerComponent "{5986AA57DB3BA13F}" {
+  }
+  SCR_MapDescriptorComponent "{5986AA57DB3BA13E}" {
+   MainType Unit
+   UnitType Infantry
+  }
+  SCR_MeleeComponent "{5986AA57DB3BA13D}" {
+  }
+  SCR_PreviewEntityComponent "{5986AA57DB38475D}" {
+   m_PreviewPrefab "{7B2420C8BC72373A}Prefabs/Characters/Core/Character_Base_Preview.et"
+  }
+  SCR_VoNComponent "{5986AA57DB38475C}" {
+   "Speaking Range" 40
+   Filename "{B4C3941EC8B2AD20}Sounds/VON/von.acp"
+  }
+  TagComponent "{5986AA57DB38475B}" {
+   "Tag categories" 1
+  }
+  CharacterIdentityComponent "{5986AA57DB384759}" {
+   Identity Identity "{5986AA57DB384758}" {
+    VisualIdentity VisualIdentity "{5986AA57DB3847A7}" {
+     Head "{2F3375E395C46AB3}Prefabs/Characters/Heads/Head_BaseBody_01.et"
+     Body "{0023F898C0FF18AA}Prefabs/Characters/Basebody/CharacterBasebody.et"
+     BodyMeshesConfig MeshConfig "{56E6D9455DF31562}" : "{C7798D607F176107}Configs/Identities/BaseBodyMeshConfig.conf" {
+     }
+    }
+    SoundIdentity SoundIdentity "{5986AA57DB3847A5}" {
+     VoiceID 100
+    }
+   }
+  }
+  BaseLoadoutManagerComponent "{5986AA57DB3847A4}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Name "Helmet"
+     Area HeadCover
+    }
+    LoadoutSlotInfo Jacket {
+     Name "Jacket"
+     Area Jacket
+     MeshesToHide {
+      "Torso" "Arm_L" "Arm_R" "ArmUpper_L" "ArmUpper_R"
+     }
+    }
+    LoadoutSlotInfo Pants {
+     Name "Pants"
+     Area Pants
+     MeshesToHide {
+      "Leg_L" "Leg_R" "Groin" "Calf_L" "Calf_R"
+     }
+    }
+    LoadoutSlotInfo Boots {
+     Name "Boots"
+     Area Boots
+    }
+    LoadoutSlotInfo Back {
+     PivotID "scene_root"
+     Name "Backpack"
+     Area Backpack
+    }
+    LoadoutSlotInfo Vest {
+     Name "Vest"
+     Area Vest
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{5986AA57DB3847AF}" {
+  }
+  ActionsManagerComponent "{5986AA57DB387421}" {
+   ActionContexts {
+    UserActionContext "{5986AA57DB387420}" {
+     ContextName "default"
+     Position PointInfo "{5986AA57DB387423}" {
+      PivotID "spine3"
+     }
+     Radius 0.5
+    }
+   }
+   additionalActions {
+    SCR_BandageUserAction "{5986AA57DB387425}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{5986AA57DB387424}" {
+      Name "#AR-BandageAction"
+     }
+     Duration 2
+    }
+    SCR_LootDeadBodyAction "{5986AA57DB387427}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{5986AA57DB387426}" {
+      Name "#AR-UserAction_Loot"
+     }
+    }
+   }
+  }
+  CharacterAnimationComponent "{5986AA57DB387438}" {
+   components {
+    SCR_CharacterCommandHandlerComponent "{5986AA57DB38743B}" {
+     "Ladders Layers" 65536
+     LadderDetectMaxDist 1.7
+     "Body Offset Reference Point" PointInfo "{5986AA57DB38743A}" {
+      PivotID "RightShoulder"
+      Offset 0 -0.144 -0.04
+     }
+     ObstructionLayers 32
+     MoveSettings ScriptCharacterCommandMoveSettings "{5986AA57DB38743C}" {
+      MovementFilterMaxChange 16
+      MaxSprintAngle 3.14
+      OnTurnSpeedReducFactor 0.2
+      OnTurnNoReducAngle 1.57
+      BankingAngleCurve {
+       0 0 0.075 0 1 1
+      }
+      AdjustedStanceChangeTime 0.025
+      AdjustedStanceChangeMaxSpeed 4
+      AdjustedStanceTraceLength 1
+      AdjustedStanceUpperThreshold 1.4
+      AdjustedStanceLowerThreshold 0.7
+      DetectLadders 0
+      MaxEnterLadderAngle 55
+      MaxLadderTangentAngle 110
+      m_fSpeed_Crouch_Fast_Forward 4
+      m_fSpeed_Crouch_Fast_Strafe 3.5
+      m_fSpeed_Prone_Normal_Forward 0.9
+      m_fSpeed_Prone_Normal_Strafe 0.9
+      m_fSpeed_Prone_Fast_Forward 1.1
+      m_fSpeed_Prone_Fast_Strafe 1
+      InnertiaCurve {
+       0 1 0.25 1 0.497 0.691 0.754 0.658 1 0.497
+      }
+      HeadingAdjustmentSpeedReduction {
+       0 0.597 0.353 0.552 0.507 0.503 0.804 0 1 0
+      }
+     }
+    }
+   }
+   AnimGraph "{DFFC0A34A77ADCB4}anims/workspaces/player/player_main.agr"
+   AnimInstance "{32965FEFBB738E5A}anims/workspaces/player/player_main.asi"
+   StartNode "MasterControl"
+   "Collision bone" "collision"
+   "Server LOD" 1
+   "LOD camera distances" {
+    5 20
+   }
+   DefaultShapeLayer 524288
+   FreshwaterLayer 4194304
+   LayerPreset "Character"
+   ColliderStand PhysAgentCollisionShapeItem "{5986AA57DB387433}" {
+    Shape Capsule
+    Size 0.75 1.8 0
+    Offset 0.05 0 0
+    StepHeight 0.55
+   }
+   ColliderCrouch PhysAgentCollisionShapeItem "{5986AA57DB387432}" {
+    Shape Capsule
+    Size 0.8 1.4 0
+    Offset 0.125 0 0.1
+    DynamicOffset 0 0 0.25
+    StepHeight 0.4
+   }
+   ColliderProne PhysAgentCollisionShapeItem "{5986AA57DB387434}" {
+    Size 0.6 0.4 1.8
+    StepHeight 0.25
+   }
+   ColliderJump PhysAgentCollisionShapeItem "{5986AA57DB387437}" {
+    Shape Capsule
+    Size 0.9 1.8 0
+    Offset 0.05 0 0.15
+    DynamicOffset 0 0 0.35
+    StepHeight 0.65
+   }
+   ColliderSwim PhysAgentCollisionShapeItem "{5986AA57DB387436}" {
+    Size 1 1.35 2
+    StepHeight 1
+   }
+   ColliderLadder PhysAgentCollisionShapeItem "{5986AA57DB387408}" {
+    Shape Capsule
+    Size 0.4 2 0.4
+    StepHeight 1
+   }
+   ColliderVehicle PhysAgentCollisionShapeItem "{5986AA57DB38740B}" {
+    Size 0.4 0.85 0.4
+    StepHeight 0.25
+   }
+  }
+  SCR_CharacterCameraHandlerComponent "{5986AA57DB38740A}" {
+   "Camera entity prefab" "{2DF95AB3CCDF4FA5}Prefabs/Characters/Core/DefaultPlayerCamera.et"
+   "CameraSet name" "CharacterCameraSet"
+  }
+  RplComponent "{5986AA57DB38740C}" {
+  }
+ }
+}

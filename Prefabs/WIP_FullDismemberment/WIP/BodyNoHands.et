@@ -1,0 +1,26 @@
+GenericEntity : "{6A75679888B8F9E0}Prefabs/Characters/Basebody/CharacterBasebodyDismemberment.et" {
+ ID "5986A1D2A2A684B3"
+ components {
+  MeshObject "{5986A1D2A2A684B9}" {
+   Materials {
+    MaterialAssignClass "{5986A1D2036AD311}" {
+     SourceMaterial "Basebody_01_Male_Arms"
+     AssignedMaterial "{5628D3B1DC058E01}Assets/Characters/Basebody/Data/ArmsAmputation/ArmsNoHands.emat"
+    }
+    MaterialAssignClass "{5986A1D2036AD2EF}" {
+     SourceMaterial "Basebody_01_Male_Arms_wound"
+     AssignedMaterial "{5628D3B1DC058E01}Assets/Characters/Basebody/Data/ArmsAmputation/ArmsNoHands.emat"
+    }
+    MaterialAssignClass "{5986A1D2036AD2EA}" {
+     SourceMaterial "Basebody_01_Male_Body"
+     AssignedMaterial "{6C688398FDBE6B05}Assets/Characters/Basebody/Data/Body_Dismemberment.emat"
+    }
+    MaterialAssignClass "{5986A1D2036AD2F5}" {
+     SourceMaterial "Basebody_01_Male_Body_wound"
+     AssignedMaterial "{6C688398FDBE6B05}Assets/Characters/Basebody/Data/Body_Dismemberment.emat"
+    }
+   }
+  }
+ }
+ coords 0 0 0
+}

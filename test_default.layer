@@ -1,0 +1,84 @@
+GenericEntity {
+ components {
+  MeshObject "{5986B842DA005089}" {
+   Object "{49B326457951B0F6}Assets/Characters/HeadGear/Hat_Knitted_01/Hat_Knitted_01.xob"
+   Materials {
+    MaterialAssignClass "{5986B842FA6E6AB7}" {
+     SourceMaterial "Hat_Knitted_01"
+     AssignedMaterial "{17A11DA8421198F3}Assets/Items/Food/Data/MeatDismemberment.emat"
+    }
+   }
+  }
+ }
+ coords 17.879 2.071 16.391
+}
+$grp SCR_ChimeraCharacter {
+ {
+  coords 10.918 1.001 12.185
+ }
+ {
+  coords 17.5 1.001 11.859
+ }
+ {
+  coords 17.077 53.947 12.899
+  {
+   GenericEntity {
+    components {
+     Hierarchy "{5986C7BA348992BE}" {
+      PivotID "Neck1"
+     }
+     RigidBody "{5986C7BAAEBBA9BF}" {
+      Active Active
+     }
+    }
+    Flags 4194371
+   }
+   GameEntity : "{E12126CDE731EED5}Prefabs/Characters/HeadGear/Hat_Boonie_US_01/Hat_Boonie_US_01.et" {
+    components {
+     RigidBody "{5112706CD4157AE6}" {
+      LayerPreset "Character"
+      Active AlwaysActive
+     }
+    }
+    coords 0.161 0.436 -0.053
+    angleX -9.876
+    angleY 87.886
+    angleZ -89.637
+   }
+  }
+ }
+}
+GenericEntity : "{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et" {
+ components {
+  RigidBody "{5534C5023A57E44E}" {
+   Active AlwaysActive
+  }
+ }
+ coords 23.644 6.305 17.584
+ angleZ 0
+ scale 10.7
+}
+$grp SCR_ChimeraCharacter : "{2619482C6C4202E0}Prefabs/Characters/Campaign/Final/Campaign_US_AI.et" {
+ {
+  coords 15.483 1.001 7.875
+ }
+ {
+  coords 14.157 1.001 8.328
+ }
+ {
+  coords 17.816 1.001 7.997
+ }
+}
+SCR_ChimeraCharacter : "{BE82EFB8829DD2EC}Prefabs/Characters/Core/Character_Base_Dismemberment.et" {
+ coords 14.768 1.001 13.507
+}
+GameEntity : "{FE5C49069C2499D9}Prefabs/Characters/HeadGear/Helmet_PASGT_01/Helmet_PASGT_01_cover.et" {
+ components {
+  RigidBody "{5112706CD4157AE6}" {
+   Layers 63
+   LayerPreset "Terrain"
+   Active AlwaysActive
+  }
+ }
+ coords 16.65 2.948 9.072
+}

@@ -1,0 +1,13 @@
+GenericEntity : "{6A75679888B8F9E0}Prefabs/Characters/Basebody/CharacterBasebodyDismemberment.et" {
+ ID "5986A1D2A2A684B3"
+ coords 0 0 0
+ {
+  GenericEntity : "{A40131F880CEF575}Assets/FleshArm.et" {
+   ID "5986C437E6F55DA9"
+   coords 0.25 1.316 -0.095
+   angleX 2.608
+   angleY -2.231
+   angleZ 139.43
+  }
+ }
+}

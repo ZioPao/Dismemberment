@@ -1,0 +1,17 @@
+MatPBRBasic {
+ Color 1 1 1 1
+ ZBias 3
+ TCModFuncs {
+  TCModShift "{5986C7B284707FA0}" {
+   UVChannel 1
+   ShiftU 7
+   ShiftV 5
+  }
+ }
+ ClutterThresholdAngle 59.139
+ AlphaTest 0.285
+ AlphaMul 1.697
+ BlendMode AlphaBlend
+ BCRMap "{7E399D0A8C928034}Assets/Characters/Basebody/Data/Arms_BCR.edds"
+ NMOMap "{46E1269855E5D2AA}Assets/Characters/Basebody/Data/Arms_NMO.edds"
+}

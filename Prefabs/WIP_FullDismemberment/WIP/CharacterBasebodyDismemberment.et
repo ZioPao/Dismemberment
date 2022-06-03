@@ -1,0 +1,31 @@
+GenericEntity {
+ ID "5986A1D2A2A684B3"
+ components {
+  MeshObject "{5986A1D2A2A684B9}" {
+   Object "{9F3AF591CD6DFE1A}Assets/Characters/Basebody/Basebody_Male_01.xob"
+   Materials {
+    MaterialAssignClass "{5986A1D2036AD311}" {
+     SourceMaterial "Basebody_01_Male_Arms"
+     AssignedMaterial "{C17F7AA416B90676}Assets/Characters/Basebody/Data/Basebody_01_Male_Arms.emat"
+    }
+    MaterialAssignClass "{5986A1D2036AD2EF}" {
+     SourceMaterial "Basebody_01_Male_Arms_wound"
+     AssignedMaterial "{3FBD6364E9BC518A}Assets/Characters/Basebody/Data/Basebody_01_Male_Arms_wound.emat"
+    }
+    MaterialAssignClass "{5986A1D2036AD2EA}" {
+     SourceMaterial "Basebody_01_Male_Body"
+     AssignedMaterial "{E96F2D55763F627D}Assets/Characters/Basebody/Data/Basebody_01_Male_Body.emat"
+    }
+    MaterialAssignClass "{5986A1D2036AD2F5}" {
+     SourceMaterial "Basebody_01_Male_Body_wound"
+     AssignedMaterial "{3FF036BE9365B015}Assets/Characters/Basebody/Data/Basebody_01_Male_Body_wound.emat"
+    }
+   }
+   LODFactors {
+    4 0.8 0.1 0.1 0.1
+   }
+   PixelSizeScale 2
+  }
+ }
+ coords 0 0 0
+}

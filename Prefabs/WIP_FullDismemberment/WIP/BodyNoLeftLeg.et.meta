@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{559072EFBAF5ABDA}Prefabs/Characters/Basebody/BodyNoLeftLeg.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

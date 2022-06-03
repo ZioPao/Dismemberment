@@ -1,0 +1,15 @@
+MatPBRBasic {
+ Color 1 1 1 1
+ Cull none
+ AlphaTest 1.88
+ AlphaMul 2.168
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{7B764657EB11F09D}Assets/Characters/Basebody/Data/HeadAmputation/Textures/last_test_BCR.edds"
+ OpacityMap "{E9B110EEA22D15A1}Assets/Characters/Basebody/Data/HeadAmputation/Textures/HeadFullDismemberment.edds"
+ NMOMap "{3F4A2E4AEF943DC5}Assets/Characters/Heads/Head_White_02/Data/Head_White_02_wound_NMO.edds"
+ DetailNormalPower 2
+ DetailNormalMap "{12677A9718A3CD99}Assets/Characters/Basebody/Data/HeadAmputation/Textures/HeadMidDismemberment_NMO.edds"
+ DetailNormalMapUVTransform MatUVTransform "{598710B6D3015AC6}" {
+ }
+}

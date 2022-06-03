@@ -1,0 +1,50 @@
+GameEntity : "{6F0C6CF6F10B4148}Prefabs/Characters/Core/CharacterHead_Base.et" {
+ ID "529C89342C390093"
+ components {
+  MeshObject "{529C8934211B4893}" {
+   Object "{52F50A5F061314A8}Assets/Characters/Heads/Head_White_02/Head_White_02.xob"
+   Materials {
+    MaterialAssignClass "{5986E9DD9C1F40B7}" {
+     SourceMaterial "Eye"
+     AssignedMaterial "{8FBC3A6E946F056E}Common/Materials/Default_Transparent.emat"
+    }
+    MaterialAssignClass "{5986E9DD9C1F40DD}" {
+     SourceMaterial "Eye_Occlusion"
+     AssignedMaterial "{8FBC3A6E946F056E}Common/Materials/Default_Transparent.emat"
+    }
+    MaterialAssignClass "{5986E9DD9C1F40D9}" {
+     SourceMaterial "Eye_Occlusion_wound"
+     AssignedMaterial "{8FBC3A6E946F056E}Common/Materials/Default_Transparent.emat"
+    }
+    MaterialAssignClass "{5986E9DD9C1F40D4}" {
+     SourceMaterial "Eye_Water"
+     AssignedMaterial "{8FBC3A6E946F056E}Common/Materials/Default_Transparent.emat"
+    }
+    MaterialAssignClass "{5986E9DD9C1F40D7}" {
+     SourceMaterial "Eye_Water_wound"
+     AssignedMaterial "{8FBC3A6E946F056E}Common/Materials/Default_Transparent.emat"
+    }
+    MaterialAssignClass "{5986E9DD9C1F40D3}" {
+     SourceMaterial "Eye_wound"
+     AssignedMaterial "{8FBC3A6E946F056E}Common/Materials/Default_Transparent.emat"
+    }
+    MaterialAssignClass "{5986E9DD9C1F40E9}" {
+     SourceMaterial "Eyelashes"
+     AssignedMaterial "{8FBC3A6E946F056E}Common/Materials/Default_Transparent.emat"
+    }
+    MaterialAssignClass "{5986E9DD9C1F40E5}" {
+     SourceMaterial "Eyelashes_wound"
+     AssignedMaterial "{8FBC3A6E946F056E}Common/Materials/Default_Transparent.emat"
+    }
+    MaterialAssignClass "{5986E9DD9C1F40E0}" {
+     SourceMaterial "Head_White_02"
+     AssignedMaterial "{FE6D85A2DF829AD1}Assets/Characters/Basebody/Data/HeadAmputation/MaleHeadMidDismemberment.emat"
+    }
+    MaterialAssignClass "{5986E9DD9C1F40FE}" {
+     SourceMaterial "Head_White_02_wound"
+     AssignedMaterial "{FE6D85A2DF829AD1}Assets/Characters/Basebody/Data/HeadAmputation/MaleHeadMidDismemberment.emat"
+    }
+   }
+  }
+ }
+}

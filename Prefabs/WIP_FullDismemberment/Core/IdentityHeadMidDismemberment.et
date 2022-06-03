@@ -1,0 +1,16 @@
+GenericEntity {
+ ID "5986E0A6E4FD72C1"
+ components {
+  CharacterIdentityComponent "{5986E0A6E4FD72CC}" {
+   Identity Identity "{5986E0A6E4FD72CB}" {
+    VisualIdentity VisualIdentity "{5986E0A6E4FD72C9}" {
+     Head "{98C2F92B92BFE317}Prefabs/Characters/Heads/Head_Mid_Dismemberment.et"
+     Body "{1EFBE3D7CC27C609}Prefabs/Characters/Basebody/TestDismemberment2.et"
+     BodyMeshesConfig MeshConfig "{5986E0A6E4FD72D7}" {
+     }
+    }
+   }
+  }
+ }
+ coords 2.265 -0.8 0.28
+}

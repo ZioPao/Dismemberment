@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{1EFBE3D7CC27C609}Prefabs/Characters/Basebody/TestDismemberment2.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

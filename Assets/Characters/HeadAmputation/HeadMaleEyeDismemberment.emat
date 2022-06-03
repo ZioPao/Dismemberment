@@ -1,0 +1,12 @@
+MatPBRBasic {
+ Cull none
+ ClutterThresholdAngle 25.911
+ AlphaTest 1.509
+ AlphaMul 2.975
+ BlendMode AlphaBlend
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{C4A44461297D8BAF}Assets/Characters/Basebody/Data/HeadAmputation/Textures/HeadEyeDismemberment_BCR.edds"
+ OpacityMap "{2CC65BECA2C4DF20}Assets/Characters/Basebody/Data/HeadAmputation/Textures/Eye_Opacity.edds"
+ NMOMap "{3F4A2E4AEF943DC5}Assets/Characters/Heads/Head_White_02/Data/Head_White_02_wound_NMO.edds"
+}
