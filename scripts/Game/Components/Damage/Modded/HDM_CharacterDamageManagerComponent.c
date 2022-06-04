@@ -20,7 +20,6 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 	
 	
 	ref map<string, ref StructHeadDismemberment> ethnMap;
-	ref map<ResourceName, string> knownHeads;
 	
 	
 	
@@ -100,25 +99,6 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 		
 		
 		
-		/*
-		
-		knownHeads = new map<ResourceName, string>;
-		knownHeads.Insert("{0F6C19B0574DCBCA}Prefabs/Characters/Heads/Head_White_03.et", "White");
-		knownHeads.Insert("{C1F80EE178D948D6}Prefabs/Characters/Heads/Head_White_08.et", "White");
-		knownHeads.Insert("{D7C470712EC4D596}Prefabs/Characters/Heads/Head_White_05.et", "White");
-		
-		
-		
-		
-		knownHeads.Insert("{04F4D8CBA36A534B}Prefabs/Characters/Heads/Head_Black_02.et", "Black");
-		knownHeads.Insert("{04F4D8CBA36A534B}Prefabs/Characters/Heads/Head_Black_02.et", "Black");
-
-		*/
-		
-		
-		
-		
-		
 		
 	}
 	
@@ -158,12 +138,12 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 		vector rotation;
 		
 
-		// start dismeemberment set it to 8
-		if (Math.RandomInt(0,4) < 8)
+		// start dismeemberment set it to 11
+		if (Math.RandomInt(0, 9) < 4)
 		{
 			
 			// Minor Dismemberment
-			if (damage > 60 && damage < 80)
+			if (damage < 80)
 			{
 				
 				// Mid
