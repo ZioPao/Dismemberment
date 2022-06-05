@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{F9D20A00D3AE088A}Prefabs/Characters/Heads/White/Head_Through_Dismemberment_White.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

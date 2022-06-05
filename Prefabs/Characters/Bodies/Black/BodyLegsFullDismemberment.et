@@ -1,0 +1,31 @@
+GenericEntity {
+ ID "598ACAA5B7E6334E"
+ components {
+  MeshObject "{598ACAA5B7E63357}" {
+   Object "{9F3AF591CD6DFE1A}Assets/Characters/Basebody/Basebody_Male_01.xob"
+   Materials {
+    MaterialAssignClass "{598AD0A885EBC428}" {
+     SourceMaterial "Basebody_01_Male_Arms"
+     AssignedMaterial "{C624B1A866D83317}Assets/Characters/Basebody/Data/Basebody_01_Male_Arms_African_wound.emat"
+    }
+    MaterialAssignClass "{598AD0A885EBC438}" {
+     SourceMaterial "Basebody_01_Male_Arms_wound"
+     AssignedMaterial "{C624B1A866D83317}Assets/Characters/Basebody/Data/Basebody_01_Male_Arms_African_wound.emat"
+    }
+    MaterialAssignClass "{598AD0A885EBC403}" {
+     SourceMaterial "Basebody_01_Male_Body"
+     AssignedMaterial "{335E1D8CDF8908C5}Assets/Characters/LegsAmputation/Materials/LegsDismembermentBlack.emat"
+    }
+    MaterialAssignClass "{598AD0A885EBC40A}" {
+     SourceMaterial "Basebody_01_Male_Body_wound"
+     AssignedMaterial "{335E1D8CDF8908C5}Assets/Characters/LegsAmputation/Materials/LegsDismembermentBlack.emat"
+    }
+   }
+   LODFactors {
+    4 0.8 0.1 0.1 0.1
+   }
+   PixelSizeScale 2
+  }
+ }
+ coords -18.369 1 8.297
+}

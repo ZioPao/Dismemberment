@@ -1,0 +1,46 @@
+GameEntity : "{6F0C6CF6F10B4148}Prefabs/Characters/Core/CharacterHead_Base.et" {
+ ID "529C89342C390093"
+ components {
+  MeshObject "{529C8934211B4893}" {
+   Object "{BAD4D6537FF34B5F}Assets/Characters/Heads/Head_Black_02/Head_Black_02.xob"
+   Materials {
+    MaterialAssignClass "{598B4E7F4727A9AB}" {
+     SourceMaterial "Eye"
+     AssignedMaterial "{050531C2C14FAD7D}Assets/Characters/Heads/Eyes/Colors/Head_Eyes_Blue.emat"
+    }
+    MaterialAssignClass "{598B4E7F4727A9DE}" {
+     SourceMaterial "Eye_Occlusion"
+     AssignedMaterial "{71C91F46F112B15C}Assets/Characters/Heads/Eyes/Occlusion/Head_Eyes_Occlusion.emat"
+    }
+    MaterialAssignClass "{598B4E7F4727A9D7}" {
+     SourceMaterial "Eye_Occlusion_wound"
+     AssignedMaterial "{71C91F46F112B15C}Assets/Characters/Heads/Eyes/Occlusion/Head_Eyes_Occlusion.emat"
+    }
+    MaterialAssignClass "{598B4E7F4727A9CA}" {
+     SourceMaterial "Eye_Water"
+     AssignedMaterial "{26A975AF0AD1C7F9}Assets/Characters/Heads/Eyes/Water/Head_Eye_water.emat"
+    }
+    MaterialAssignClass "{598B4E7F4727A9C2}" {
+     SourceMaterial "Eye_Water_wound"
+     AssignedMaterial "{35A01A46E1020BD3}Assets/Characters/Heads/Eyes/Water/Head_Eye_water_wound.emat"
+    }
+    MaterialAssignClass "{598B4E7F4727A9F8}" {
+     SourceMaterial "Eye_wound"
+     AssignedMaterial "{050531C2C14FAD7D}Assets/Characters/Heads/Eyes/Colors/Head_Eyes_Blue.emat"
+    }
+    MaterialAssignClass "{598B4E7F4727A9FF}" {
+     SourceMaterial "Eyelashes_wound"
+     AssignedMaterial "{7C1A0FF673494271}Assets/Characters/Heads/Eyes/Colors/Head_Eyes_Blue_wound.emat"
+    }
+    MaterialAssignClass "{598B4E7F4727A9F6}" {
+     SourceMaterial "Head_African_02"
+     AssignedMaterial "{7D7B3BF62C3ACD51}Assets/Characters/HeadAmputation/Materials/MaleHeadThroughDismemberment_Black.emat"
+    }
+    MaterialAssignClass "{598B4E7F4727A9EA}" {
+     SourceMaterial "Head_African_02_wound"
+     AssignedMaterial "{7D7B3BF62C3ACD51}Assets/Characters/HeadAmputation/Materials/MaleHeadThroughDismemberment_Black.emat"
+    }
+   }
+  }
+ }
+}

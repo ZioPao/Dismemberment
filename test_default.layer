@@ -1,16 +1,8 @@
-GenericEntity {
- components {
-  MeshObject "{5986B842DA005089}" {
-   Object "{49B326457951B0F6}Assets/Characters/HeadGear/Hat_Knitted_01/Hat_Knitted_01.xob"
-   Materials {
-    MaterialAssignClass "{5986B842FA6E6AB7}" {
-     SourceMaterial "Hat_Knitted_01"
-     AssignedMaterial "{17A11DA8421198F3}Assets/Materials/MeatDismemberment.emat"
-    }
-   }
-  }
- }
- coords 17.879 2.071 223.222
+GameEntity {
+ coords 16.072 2.323 218.407
+ angleX -68.36
+ angleY -180
+ angleZ -180
 }
 $grp SCR_ChimeraCharacter {
  {
@@ -65,16 +57,6 @@ $grp SCR_ChimeraCharacter {
  {
   coords 17.35 2.455 218.71
  }
-}
-GenericEntity : "{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et" {
- components {
-  RigidBody "{5534C5023A57E44E}" {
-   Active AlwaysActive
-  }
- }
- coords 23.644 6.305 224.415
- angleZ 0
- scale 10.7
 }
 $grp SCR_ChimeraCharacter : "{2619482C6C4202E0}Prefabs/Characters/Campaign/Final/Campaign_US_AI.et" {
  {
@@ -140,9 +122,6 @@ $grp SCR_ChimeraCharacter : "{2619482C6C4202E0}Prefabs/Characters/Campaign/Final
  {
   coords 17.666 2.455 214.848
  }
-}
-SCR_ChimeraCharacter : "{BE82EFB8829DD2EC}Prefabs/WIP_FullDismemberment/Core/Character_Base_Dismemberment.et" {
- coords 14.768 1.001 220.338
 }
 GameEntity : "{FE5C49069C2499D9}Prefabs/Characters/HeadGear/Helmet_PASGT_01/Helmet_PASGT_01_cover.et" {
  components {

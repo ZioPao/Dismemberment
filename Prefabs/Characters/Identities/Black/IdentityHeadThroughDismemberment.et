@@ -1,0 +1,15 @@
+GenericEntity {
+ ID "598B4E7F697F6E41"
+ components {
+  CharacterIdentityComponent "{598B4E7F697F6E78}" {
+   Identity Identity "{598B4E7F697F6E7D}" {
+    VisualIdentity VisualIdentity "{598B4E7F697F6E72}" {
+     Head "{313208F216D74840}Prefabs/Characters/Heads/Black/Head_Through_Dismemberment_Black.et"
+     BodyMeshesConfig MeshConfig "{598B4E7F697F6E73}" {
+     }
+    }
+   }
+  }
+ }
+ coords 2.265 -0.8 0.28
+}

@@ -9,9 +9,9 @@ MatPBRBasic {
  RoughnessScale 2.282
  MetalnessScale 1.25
  AOScale 0.858
- BCRMap "{EF7D33D5F4EAACC3}Assets/Characters/HeadAmputation/Textures/Black/HeadDismemberment_BCR.edds"
+ BCRMap "{EF7D33D5F4EAACC3}Assets/Characters/HeadAmputation/Textures/Black/HeadDismembermentMain_BCR.edds"
  OpacityMap "{E9B110EEA22D15A1}Assets/Characters/HeadAmputation/Textures/HeadFullDismemberment.edds"
- NormalPower 1.038
+ NormalPower 1.241
  NMOMap "{06263401947227C4}Assets/Characters/Heads/Head_Black_02/Data/Head_Black_02_wound_NMO.edds"
  DetailNormalPower 2
  DetailNormalMapUVTransform MatUVTransform "{598710B6D3015AC6}" {

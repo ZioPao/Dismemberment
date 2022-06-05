@@ -1,0 +1,16 @@
+MatPBRBasic {
+ Color 0.224 0 0 1
+ Cull none
+ AddWetness 1
+ SpecularMul 5
+ AlphaTest 0.176
+ RoughnessScale 0
+ MetalnessScale 0
+ AOScale 5
+ DielectricReflectance 0.025
+ BCRMap "{35B01C74DDE233FB}Assets/Materials/TempTex/gore/gore_generic_GHM.edds"
+ OpacityMap "{134B2C6317735F54}Assets/Materials/TempTex/gore/gore_generic_GHM_O.edds"
+ NMOMap "{55CF5DBE34CC057F}Assets/Materials/TempTex/gore/gore_generic_GHM_NORM.edds"
+ DetailNormalPower 0.382
+ DetailNormalMap "{8F5BCF9260219377}Assets/Materials/TempTex/gore/gore_generic_GHM_NORM_NORM.edds"
+}

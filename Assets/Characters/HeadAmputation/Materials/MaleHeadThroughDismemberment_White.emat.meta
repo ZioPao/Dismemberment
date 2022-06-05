@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{042EB2F68CE26DD6}Assets/Characters/HeadAmputation/Materials/MaleHeadThroughDismemberment_White.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

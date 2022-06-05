@@ -3,6 +3,18 @@ GameProject {
  GUID "5986A0819747D0B5"
  TITLE "Dismemberment"
  Dependencies {
-  "58D0FB3206B6F859"
+  "58D0FB3206B6F859" "597CD68C9541DE3A"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig HEADLESS {
+  }
  }
 }

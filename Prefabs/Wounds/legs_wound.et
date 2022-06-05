@@ -1,0 +1,15 @@
+GenericEntity {
+ ID "5988FDC3E4E5C021"
+ components {
+  MeshObject "{5988FDC3CC98CE5D}" {
+   Object "{ACD28300515128D7}Assets/models/protrudedLegAmputation.xob"
+   Materials {
+    MaterialAssignClass "{5988FDC3CB5771ED}" {
+     SourceMaterial "flesh"
+     AssignedMaterial "{17A11DA8421198F3}Assets/Materials/MeatDismemberment.emat"
+    }
+   }
+  }
+ }
+ scale 0.9
+}

@@ -1,0 +1,14 @@
+GenericEntity {
+ ID "598B3068836DB672"
+ components {
+  MeshObject "{598B3068836DB67A}" {
+   Object "{99FE734D741594EF}Assets/models/wound_amputation.xob"
+   Materials {
+    MaterialAssignClass "{598B3068836DB678}" {
+     SourceMaterial "flesh"
+     AssignedMaterial "{17A11DA8421198F3}Assets/Materials/MeatDismemberment.emat"
+    }
+   }
+  }
+ }
+}

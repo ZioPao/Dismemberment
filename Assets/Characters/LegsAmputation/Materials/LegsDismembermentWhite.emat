@@ -1,0 +1,10 @@
+MatPBRBasic {
+ Color 1 1 1 1
+ Cull none
+ AlphaTest 0.085
+ AlphaMul 1.029
+ BCRMap "{F11619106FCD0951}Assets/Characters/LegsAmputation/Textures/Body_BCR.edds"
+ OpacityMap "{9F81F9BEC5446B84}Assets/Characters/LegsAmputation/Textures/opacity_fullbody_test.edds"
+ NormalPower 2.139
+ NMOMap "{589DAE785AF1811C}Assets/Characters/Basebody/Data/Basebody_01_Male_Body_wound_NMO.edds"
+}

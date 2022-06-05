@@ -4,11 +4,12 @@ GenericEntity {
   MeshObject "{598741476047826F}" {
    Object "{99FE734D741594EF}Assets/models/wound_amputation.xob"
    Materials {
-    MaterialAssignClass "{59874148D07737CC}" {
+    MaterialAssignClass "{598B364AAFD7208B}" {
      SourceMaterial "flesh"
-     AssignedMaterial "{3E48D33074C6905C}Assets/Materials/MeatDismemberment2.emat"
+     AssignedMaterial "{F4EAA5AA0D6DBA3B}Assets/Materials/TempTex/gore/generic_gore_GHM.emat"
     }
    }
   }
  }
+ coords 0 1 0
 }

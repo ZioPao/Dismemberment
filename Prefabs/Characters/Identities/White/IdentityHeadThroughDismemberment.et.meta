@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{2161B15B0163AC1B}Prefabs/Characters/Identities/White/IdentityHeadThroughDismemberment.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

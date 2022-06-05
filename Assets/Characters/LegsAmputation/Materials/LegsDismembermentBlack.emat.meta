@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{335E1D8CDF8908C5}Assets/Characters/LegsAmputation/Materials/LegsDismembermentBlack.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

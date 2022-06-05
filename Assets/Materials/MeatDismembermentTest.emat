@@ -1,0 +1,17 @@
+MatPBRBasic {
+ SpecularIBL 1 0.244 0.244 1
+ SurfaceProperties "{DA94EA1EF2914EB7}Common/Materials/Game/flesh.gamemat"
+ Specular 1 0.241 0.241 1
+ SpecularMul 1.108
+ AlphaTest 0.237
+ AlphaMul 0.237
+ RoughnessScale 0.285
+ MetalnessScale 1.206
+ AOScale 1.234
+ BCRMap "{173EF625B1ACF021}Assets/Materials/TempTex/gore_generic_BCR.edds"
+ OpacityMap "{CA99432B899DCE4C}Assets/Materials/TempTex/gore_generic_O.edds"
+ NormalPower 0.469
+ NMOMap "{2FE64DB768DBA2BF}Assets/Materials/TempTex/gore_generic_NMO.edds"
+ DetailNormalPower 0.241
+ DetailNormalMap "{80AC5C80B53B0E43}Assets/Materials/TempTex/gore_generic_GHM_NORM_NORM.edds"
+}
