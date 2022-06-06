@@ -7,7 +7,7 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 	const ResourceName IDENTITY_HeadEyeDismembermentBlack = "{EE1E32B10A398E83}Prefabs/Identities/Black/IdentityHeadEyeDismemberment.et";
 	const ResourceName IDENTITY_HeadFullDismembermentBlack = "{F1F57D8F72C5897E}Prefabs/Identities/Black/IdentityHeadFullDismemberment.et";
 	const ResourceName IDENTITY_HeadMidDismembermentBlack = "{CA2D3383201D1745}Prefabs/Identities/Black/IdentityHeadMidDismemberment.et";
-	const ResourceName IDENTITY_HeadThroughDismembermentBlack = "{16B4CED2E5822753}Prefabs/Characters/Identities/Black/IdentityHeadThroughDismemberment.et";		//temp
+	const ResourceName IDENTITY_HeadThroughDismembermentBlack = "{16B4CED2E5822753}Prefabs/Characters/Identities/Black/IdentityHeadThroughDismemberment.et";		
 
 	
 	const ResourceName IDENTITY_HeadEyeDismembermentWhite = "{45DAB89BBE306ADF}Prefabs/Identities/White/IdentityHeadEyeDismemberment.et";
@@ -56,7 +56,7 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 	{
 		super.OnDamage(type, damage, pHitZone, instigator, hitTransform, speed, colliderID, nodeID);
 		
-		Print(pHitZone.GetName());
+		//Print(pHitZone.GetName());
 		
 		if (lastState == EDamageState.DESTROYED && damage > 75)
 		{
@@ -75,13 +75,18 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 			mapDefaultValues.Set("probabilityLegsDismemberment", "50");
 	
 				
-				
-			array<string> userFriendlyNames = {"Head Dismemberment Probability", "Legs Dismemberment Probability"};
+			
+			//something is broken with the user friendly names stuff, i'll reverse it manually for now
+			array<string> userFriendlyNames = { "Legs Dismemberment Probability", "Head Dismemberment Probability"};
+			
+			
+			
+			
 			settings = mcfSettingsManager.Setup(MOD_ID, fileNameJson, mapDefaultValues, userFriendlyNames);
 			probabilityHeadDismemberment = settings.Get("probabilityHeadDismemberment").ToInt();
 			probabilityLegsDismemberment = settings.Get("probabilityLegsDismemberment").ToInt();
 				
-			Print("Initialized stuff for DMD");
+			//Print("Initialized stuff for DMD");
 			
 			// SETTINGS STUFF
 			probabilityHeadDismemberment = settings.Get("probabilityHeadDismemberment").ToInt();
@@ -98,7 +103,7 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 				case "Head":
 				{
 					randomProbability = Math.RandomInt(0,100);
-					Print(randomProbability);
+					//Print(randomProbability);
 					if (randomProbability <= probabilityHeadDismemberment)
 						PerformHeadAmputation(damage);
 					break;
@@ -107,10 +112,11 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 				case "RThigh":
 				case "LCalf":
 				case "RCalf":
-				
+				case "LFoot":
+				case "RFoot":
 				{
 					randomProbability = Math.RandomInt(0,100);
-					Print(randomProbability);
+					//Print(randomProbability);
 					if (damage > 100 && randomProbability <= probabilityLegsDismemberment)
 						PerformLegAmputation();
 					break;
@@ -143,18 +149,12 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 	{
 		ethnMap = new map<string, ref StructIdentityDismemberment>;
 		
-		
-		
-		// todo add for legs 
-		
-		
+
 		
 		ethnMap.Insert("WhiteHeadEye", new StructIdentityDismemberment(IDENTITY_HeadEyeDismembermentWhite, PREFAB_eyeWound));
 		ethnMap.Insert("WhiteHeadMid", new StructIdentityDismemberment(IDENTITY_HeadMidDismembermentWhite, PREFAB_genericWound));
 		ethnMap.Insert("WhiteHeadFull", new StructIdentityDismemberment(IDENTITY_HeadFullDismembermentWhite, PREFAB_genericWound));
 		ethnMap.Insert("WhiteHeadThrough", new StructIdentityDismemberment(IDENTITY_HeadThroughDismembermentWhite, PREFAB_eyeWound));
-
-		
 		ethnMap.Insert("BlackHeadEye", new StructIdentityDismemberment(IDENTITY_HeadEyeDismembermentBlack, PREFAB_eyeWound));
 		ethnMap.Insert("BlackHeadMid", new StructIdentityDismemberment(IDENTITY_HeadMidDismembermentBlack, PREFAB_genericWound));
 		ethnMap.Insert("BlackHeadFull", new StructIdentityDismemberment(IDENTITY_HeadFullDismembermentBlack, PREFAB_genericWound));
@@ -162,7 +162,6 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 
 		
 		ethnMap.Insert("WhiteLegsFull", new StructIdentityDismemberment(IDENTITY_LegsFullDismembermentWhite, PREFAB_legsWound));
-		
 		ethnMap.Insert("BlackLegsFull", new StructIdentityDismemberment(IDENTITY_LegsFullDismembermentBlack, PREFAB_legsWound));
 
 		
@@ -290,21 +289,34 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 			
 			
 			
-			
+		StructParamsMeshes leftMeshParams = StructParamsMeshes("-0.0 0 -0.011", "0 10 10", scale, 78904579);
+		StructParamsMeshes rightMeshParams = StructParamsMeshes("0.0 -0 0.0175", "0 -10 185", scale, 4048764342);
+
 		
 		//Spawn amputation 
-		IEntity woundEntityLeft = GetGame().SpawnEntityPrefab(woundResource);
-		IEntity woundEntityRight = GetGame().SpawnEntityPrefab(woundResource);
+		//IEntity woundEntityLeft = GetGame().SpawnEntityPrefab(woundResource);
+		//IEntity woundEntityRight = GetGame().SpawnEntityPrefab(woundResource);
 	
-		woundEntityLeft.SetScale(scale);
-		woundEntityRight.SetScale(scale);
+		//woundEntityLeft.SetScale(scale);
+		//woundEntityRight.SetScale(scale);
 	
-		GetOwner().AddChild(woundEntityLeft, pivotIdLeft);
-		GetOwner().AddChild(woundEntityRight, pivotIdRight);
+		//GetOwner().AddChild(woundEntityLeft, pivotIdLeft);
+		//GetOwner().AddChild(woundEntityRight, pivotIdRight);
 	
-		vector rotation = {0, 0, 180};
-		woundEntityRight.SetYawPitchRoll(rotation);
-			
+		
+		//vector rotationLeft = {0, 0, 0};
+		//vector rotationRight = {0, -10, 195};		// 0 0 180
+		
+		//woundEntityLeft.SetYawPitchRoll(rotationLeft);
+		//woundEntityRight.SetYawPitchRoll(rotationRight);
+		
+		
+		
+		
+		SpawnAndApplyWoundMesh(woundResource, leftMeshParams);
+		SpawnAndApplyWoundMesh(woundResource, rightMeshParams);
+		
+		
 		RemoveCloth(ELoadoutArea.ELA_Pants, true, 0);
 		RemoveCloth(ELoadoutArea.ELA_Boots, true, 0);
 

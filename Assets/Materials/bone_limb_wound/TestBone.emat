@@ -1,0 +1,10 @@
+MatPBRDecal {
+ BCRMap "{97E1BFFDF453D74A}Assets/Materials/bone_limb_wound/flesh2_bcr.edds"
+ NormalPower -0.304
+ NMOMap "{B8F4304E24F2B837}Assets/Materials/bone_limb_wound/flesh_nmo.edds"
+ HeightMap "{991367F7C39F9415}Assets/Materials/bone_limb_wound/flesh2_h.edds"
+ ParallaxScale 0.098
+ ParallaxMidlePlane 0.594
+ ParallaxShadowScale 0.171
+ WaterAccumulation -0.253
+}

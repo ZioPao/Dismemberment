@@ -4,9 +4,9 @@ GenericEntity {
   MeshObject "{5988FDC3CC98CE5D}" {
    Object "{ACD28300515128D7}Assets/models/protrudedLegAmputation.xob"
    Materials {
-    MaterialAssignClass "{5988FDC3CB5771ED}" {
+    MaterialAssignClass "{598C728AA8C2CB04}" {
      SourceMaterial "flesh"
-     AssignedMaterial "{17A11DA8421198F3}Assets/Materials/MeatDismemberment.emat"
+     AssignedMaterial "{D4BB741F11589DA8}Assets/Materials/bone_limb_wound/dismembermentlimbbonetex_generic_GHM.emat"
     }
    }
   }

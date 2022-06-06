@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{83E43A398A157D56}Assets/Materials/bone_limb_wound/TestBone.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}
