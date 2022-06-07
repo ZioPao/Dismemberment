@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{0080C2A03428B843}materials/gore/gore_generic_GHM_DISP.edds"
+ Name "{0080C2A03428B843}Assets/Materials/TempTex/gore/gore_generic_GHM_DISP.edds"
  Configurations {
   PNGResourceClass PC : "{DC555BD399D92412}Configs/System/ResourceTypes/PC/TextureUnspecified.conf" {
   }

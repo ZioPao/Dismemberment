@@ -40,7 +40,18 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 	
 	ref map<string, string> settings;
 	
+		
+		
 
+		//LEFT ARM ID = 1885426032
+		//LEFT ARM TWIST ID = 3566461163
+		//RIGHT ARM TWIST ID = 3241353630
+		// UPPER NECK ID = 268344569            ---------> Full dismemberment of head 
+		// HEAD ID = 2090324343                 ---------> Mid dismbemberment of head
+		// TONGUE ID = 2888468306				----------> Mid dismemberment of head BETTER
+		// RIGHT EYE ID = 256054695	
+		// RIGHT BROW ID = 1850873948			
+		
 	
 
 	
@@ -125,12 +136,6 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 			}
 		
 		}
-
-
-			//PerformHeadAmputation(damage);
-		
-		
-		
 		
 		//map<string,string> paramsMaterial = new map<string,string>();
 		
@@ -164,9 +169,6 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 		ethnMap.Insert("WhiteLegsFull", new StructIdentityDismemberment(IDENTITY_LegsFullDismembermentWhite, PREFAB_legsWound));
 		ethnMap.Insert("BlackLegsFull", new StructIdentityDismemberment(IDENTITY_LegsFullDismembermentBlack, PREFAB_legsWound));
 
-		
-		
-		
 		
 	}
 	
@@ -256,7 +258,7 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 		int pivotIdLeft = 78904579;
 		int pivotIdRight = 4048764342;
 			
-		float scale = 0.06;
+		float scale = 0.055;
 			
 		Resource identityResource = Resource.Load(legsStruct.identity);
 		Resource woundResource = Resource.Load(legsStruct.woundPrefab);		
@@ -282,36 +284,11 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 			identityComponent.Deactivate(identityEntity);
 		}
 	
+					
 			
 			
-		//it's not deleting them. No idea why. Can't even make them invisible ffs. 
-		delete identityEntity;		//it's not working?
-			
-			
-			
-		StructParamsMeshes leftMeshParams = StructParamsMeshes("-0.0 0 -0.011", "0 10 10", scale, 78904579);
+		StructParamsMeshes leftMeshParams = StructParamsMeshes("-0.0 -0.02 0.016", "0 20 10", scale, 78904579);
 		StructParamsMeshes rightMeshParams = StructParamsMeshes("0.0 -0 0.0175", "0 -10 185", scale, 4048764342);
-
-		
-		//Spawn amputation 
-		//IEntity woundEntityLeft = GetGame().SpawnEntityPrefab(woundResource);
-		//IEntity woundEntityRight = GetGame().SpawnEntityPrefab(woundResource);
-	
-		//woundEntityLeft.SetScale(scale);
-		//woundEntityRight.SetScale(scale);
-	
-		//GetOwner().AddChild(woundEntityLeft, pivotIdLeft);
-		//GetOwner().AddChild(woundEntityRight, pivotIdRight);
-	
-		
-		//vector rotationLeft = {0, 0, 0};
-		//vector rotationRight = {0, -10, 195};		// 0 0 180
-		
-		//woundEntityLeft.SetYawPitchRoll(rotationLeft);
-		//woundEntityRight.SetYawPitchRoll(rotationRight);
-		
-		
-		
 		
 		SpawnAndApplyWoundMesh(woundResource, leftMeshParams);
 		SpawnAndApplyWoundMesh(woundResource, rightMeshParams);
@@ -438,39 +415,6 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 		}
 
 		
-		//it's not deleting them. No idea why. Can't even make them invisible ffs. 
-		delete identityEntity;		//it's not working?
-		
-		
-		
-		
-		//Spawn amputation 
-		//params = EntitySpawnParams();
-		//params.TransformMode = ETransformMode.LOCAL;
-		//GetOwner().GetLocalTransform(params.Transform);
-		
-		//params.Transform[3][0] = params.Transform[3][0] + 0.000005 ;
-			
-
-		//armEntity.SetScale(0.04);
-		
-		
-		
-		//IEntity woundEntity = GetGame().SpawnEntityPrefab(woundResource);
-		//woundEntity.SetScale(scale);
-		//woundEntity.SetYawPitchRoll(rotation);
-		
-		//vector woundOrigin = woundEntity.GetOrigin();
-		//woundOrigin[0] = woundOrigin[0] - diffX;		// shift it a little to the left
-		//woundOrigin[1] = woundOrigin[1] - diffY;		//move them back in the skull
-		//woundOrigin[2] = woundOrigin[2] - diffZ;		// a little higher
-		//woundEntity.SetOrigin(woundOrigin);
-		
-
-		//GetOwner().AddChild(woundEntity, pivotId);
-		
-		
-		
 		SpawnAndApplyWoundMesh(woundResource, meshesParams);
 
 		if (doubleWound)
@@ -481,26 +425,6 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 			meshesParams.diffY = meshesParams.diffY + 0.176;
 			SpawnAndApplyWoundMesh(woundResource, meshesParams);
 
-			/*
-			IEntity secondWoundEntity = GetGame().SpawnEntityPrefab(woundResource);
-			secondWoundEntity.SetScale(scale);
-			
-			
-			rotation[1] = -10;
-			rotation[2] = rotation[2] + 180;
-
-			
-			secondWoundEntity.SetYawPitchRoll(rotation);		//todo should apply rotation
-		
-			vector secondWoundOrigin = secondWoundEntity.GetOrigin();
-			secondWoundOrigin[0] = secondWoundOrigin[0] - diffX;		// shift it a little to the left
-			secondWoundOrigin[1] = secondWoundOrigin[1] - diffY - 0.176;		//move them back in the skull
-			secondWoundOrigin[2] = secondWoundOrigin[2] - diffZ;		// a little higher
-			secondWoundEntity.SetOrigin(secondWoundOrigin);
-		
-
-			GetOwner().AddChild(secondWoundEntity, pivotId);
-			*/
 		
 		}
 		
@@ -510,46 +434,10 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 		
 		RemoveCloth(ELoadoutArea.ELA_HeadCover, false, 1.7);
 		
-		
-		
 
 		
 		
-		//Right stuff needs to be arranged 
 		
-		//rightArmEntity.SetScale(0.04);
-		//rightArmEntity.SetYawPitchRoll("0 0 -180");
-
-				
-		
-		
-		
-		
-		//LEFT ARM ID = 1885426032
-		//LEFT ARM TWIST ID = 3566461163
-		//RIGHT ARM TWIST ID = 3241353630
-		
-		
-		
-		// UPPER NECK ID = 268344569            ---------> Full dismemberment of head 
-		// HEAD ID = 2090324343                 ---------> Mid dismbemberment of head
-		// TONGUE ID = 2888468306				----------> Mid dismemberment of head BETTER
-		// RIGHT EYE ID = 256054695
-		
-		// RIGHT BROW ID = 1850873948			
-		
-		
-		
-		
-		//GetCharacter().AddChild(rightArmEntity, 3241353630);
-		
-		
-		
-		//ResourceName identityName = "{FAE42E51C156837D}Configs/Identities/VisualIdentity_Dismemberment.conf";
-		
-		//Identity identityDismemberment = Identity.Cast(BaseContainerTools.LoadContainer(identityName));
-		//identityComponent.SetIdentity(identity);
-	
 	}
 	
 	

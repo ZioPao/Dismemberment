@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{B8F4304E24F2B837}Assets/Materials/TempTex/bone_limb_wound/flesh_nmo.edds"
+ Name "{B8F4304E24F2B837}Assets/Materials/bone_limb_wound/flesh_nmo.edds"
  Configurations {
   PNGResourceClass PC : "{A968DA7F9A1E3A3E}Configs/System/ResourceTypes/PC/TextureNType.conf" {
   }

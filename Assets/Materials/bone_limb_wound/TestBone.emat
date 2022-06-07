@@ -1,10 +1,13 @@
 MatPBRDecal {
+ SpecularMul 0.415
+ RoughnessScale 0.747
+ MetalnessScale 2.297
  BCRMap "{97E1BFFDF453D74A}Assets/Materials/bone_limb_wound/flesh2_bcr.edds"
- NormalPower -0.304
- NMOMap "{B8F4304E24F2B837}Assets/Materials/bone_limb_wound/flesh_nmo.edds"
- HeightMap "{991367F7C39F9415}Assets/Materials/bone_limb_wound/flesh2_h.edds"
+ NormalPower 0.785
+ NMOMap "{AF39046F2D2485D4}Assets/Materials/bone_limb_wound/flesh2_nmo.edds"
+ HeightMap "{00046C0E4DB55872}Assets/Materials/bone_limb_wound/flesh_h.edds"
  ParallaxScale 0.098
  ParallaxMidlePlane 0.594
- ParallaxShadowScale 0.171
+ ParallaxShadowScale 0.679
  WaterAccumulation -0.253
 }

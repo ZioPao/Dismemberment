@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{F11619106FCD0951}Assets/Characters/LegsAmputation/Textures/Body_BCR.edds"
+ Name "{F11619106FCD0951}Assets/Characters/LegsAmputation/Textures/White/Body_BCR.edds"
  Configurations {
   TGAResourceClass PC : "{EAB5DE3219F9CBA8}Configs/System/ResourceTypes/PC/TextureColorMap.conf" {
   }

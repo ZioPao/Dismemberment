@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{2CC65BECA2C4DF20}Assets/Characters/Basebody/Data/HeadAmputation/Textures/Eye_Opacity.edds"
+ Name "{2CC65BECA2C4DF20}Assets/Characters/HeadAmputation/Textures/Eye_Opacity.edds"
  Configurations {
   PNGResourceClass PC : "{DC555BD399D92412}Configs/System/ResourceTypes/PC/TextureUnspecified.conf" {
   }

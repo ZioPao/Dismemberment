@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{A9ED9C16B42CE667}Assets/Characters/Basebody/Data/HeadAmputation/Textures/HeadRandomDismemberment_Opacity.edds"
+ Name "{A9ED9C16B42CE667}Assets/Characters/HeadAmputation/Textures/HeadRandomDismemberment_Opacity.edds"
  Configurations {
   TGAResourceClass PC : "{DC555BD399D92412}Configs/System/ResourceTypes/PC/TextureUnspecified.conf" {
   }

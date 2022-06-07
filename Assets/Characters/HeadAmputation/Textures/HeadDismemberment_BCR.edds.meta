@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{7B764657EB11F09D}Assets/Characters/Basebody/Data/HeadAmputation/Textures/HeadDismemberment_BCR.edds"
+ Name "{7B764657EB11F09D}Assets/Characters/HeadAmputation/Textures/HeadDismemberment_BCR.edds"
  Configurations {
   TGAResourceClass PC : "{EAB5DE3219F9CBA8}Configs/System/ResourceTypes/PC/TextureColorMap.conf" {
   }

@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{CE56B89B423DE2DD}Assets/Characters/Basebody/Data/HeadAmputation/Textures/Blood Decals HM.edds"
+ Name "{CE56B89B423DE2DD}Assets/Characters/HeadAmputation/Textures/Blood Decals HM.edds"
  Configurations {
   PNGResourceClass PC : "{DC555BD399D92412}Configs/System/ResourceTypes/PC/TextureUnspecified.conf" {
   }

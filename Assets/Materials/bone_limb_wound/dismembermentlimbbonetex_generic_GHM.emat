@@ -1,15 +1,15 @@
 MatPBRBasic {
- Color 0.96 0.96 0.96 1
- DiffuseIBL 0.206 0.206 0.206 1
- Specular 1 1 1 1
- SpecularMul 1.234
- RoughnessScale 0.981
- MetalnessScale 2.595
+ Color 1 1 1 1
+ DiffuseIBL 1 0.704 0.704 1
+ SpecularIBL 0.076 0.023 0.023 1
+ SpecularMul 3.022
+ RoughnessScale 0.411
+ MetalnessScale 0.95
  AOScale 1.601
  DielectricReflectance 0.034
  BCRMap "{97E1BFFDF453D74A}Assets/Materials/bone_limb_wound/flesh2_bcr.edds"
- NormalPower 2.494
+ NormalPower 1.823
  NMOMap "{AF39046F2D2485D4}Assets/Materials/bone_limb_wound/flesh2_nmo.edds"
- DetailNormalPower 1.468
+ DetailNormalPower 1.405
  DetailNormalMap "{1C1FAA4E72679E55}Assets/Materials/bone_limb_wound/flesh_n.edds"
 }

@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{134B2C6317735F54}materials/gore/gore_generic_GHM_O.edds"
+ Name "{134B2C6317735F54}Assets/Materials/TempTex/gore/gore_generic_GHM_O.edds"
  Configurations {
   PNGResourceClass PC : "{6B149ECE3A72EF45}Configs/System/ResourceTypes/PC/TextureOneChannel.conf" {
   }
