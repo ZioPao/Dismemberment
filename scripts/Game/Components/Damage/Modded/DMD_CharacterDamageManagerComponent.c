@@ -38,7 +38,7 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 	float probabilityLegsDismemberment;
 
 	
-	ref map<string, string> settings;
+	ref map<string, string> dmdSettings;
 	
 		
 		
@@ -75,34 +75,32 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 			
 			// should be done ONLY ONE TIME
 
-			MCF_SettingsManager mcfSettingsManager = MCF_SettingsManager.GetInstance();
-			
-			const string fileNameJson = "DMD_Settings.json";
-			const string MOD_ID = "5986A0819747D0B5";				
-			map<string, string> mapDefaultValues = new map<string, string>();
+			MCF_SettingsManager DMD_mcfSettingsManager = MCF_SettingsManager.GetInstance();
+			const string DMD_fileNameJson = "DMD_Settings.json";
+			const string DMD_MOD_ID = "5986A0819747D0B5";				
+			map<string, ref VariableInfo> dmdVariablesMap = new map<string, ref VariableInfo>();
 				
 				
-			mapDefaultValues.Set("probabilityHeadDismemberment", "50");
-			mapDefaultValues.Set("probabilityLegsDismemberment", "50");
+			dmdVariablesMap.Set("probabilityHeadDismemberment", new VariableInfo("Head Dismemberment Probability", "50"));
+			dmdVariablesMap.Set("probabilityLegsDismemberment", new VariableInfo("Legs Dismemberment Probability", "50"));
 	
 				
+			if (!DMD_mcfSettingsManager.GetJsonManager(DMD_MOD_ID))
+				dmdSettings = DMD_mcfSettingsManager.Setup(DMD_MOD_ID, DMD_fileNameJson, dmdVariablesMap);
+			else if (!dmdSettings)
+			{
+				dmdSettings = DMD_mcfSettingsManager.GetModSettings(DMD_MOD_ID);
+				DMD_mcfSettingsManager.GetJsonManager(DMD_MOD_ID).SetupUserFriendlyVariableNames(dmdVariablesMap);
+			}
 			
-			//something is broken with the user friendly names stuff, i'll reverse it manually for now
-			array<string> userFriendlyNames = { "Legs Dismemberment Probability", "Head Dismemberment Probability"};
+				
 			
-			
-			
-			
-			settings = mcfSettingsManager.Setup(MOD_ID, fileNameJson, mapDefaultValues, userFriendlyNames);
-			probabilityHeadDismemberment = settings.Get("probabilityHeadDismemberment").ToInt();
-			probabilityLegsDismemberment = settings.Get("probabilityLegsDismemberment").ToInt();
+			probabilityHeadDismemberment = dmdSettings.Get("probabilityHeadDismemberment").ToInt();
+			probabilityLegsDismemberment = dmdSettings.Get("probabilityLegsDismemberment").ToInt();
 				
 			//Print("Initialized stuff for DMD");
 			
-			// SETTINGS STUFF
-			probabilityHeadDismemberment = settings.Get("probabilityHeadDismemberment").ToInt();
-			probabilityLegsDismemberment = settings.Get("probabilityLegsDismemberment").ToInt();
-			
+
 			
 			InitEthnMap();
 			
